@@ -6,14 +6,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from datasets import Dataset, load_dataset
 HF_TOKEN = os.getenv("HF_TOKEN")
-# Load data from HuggingFace
-try:
-    dataset = load_dataset("maha5994/tourism-package-prediction", split="train")
-    df = dataset.to_pandas()
-    print(f"Dataset loaded from HuggingFace: {len(df)} rows")
-except:
-    df = pd.read_csv("tourism.csv")
-    print(f"Dataset loaded locally: {len(df)} rows")
+
+df = pd.read_csv("tourism.csv")
+print(f"Dataset loaded locally: {len(df)} rows")
 
 # Data cleaning and preprocessing
 print("Starting data cleaning...")
