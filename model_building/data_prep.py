@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 from datasets import Dataset, load_dataset
 HF_TOKEN = os.getenv("HF_TOKEN")
 
-df = pd.read_csv("tourism.csv")
+df = pd.read_csv("data/tourism.csv")
 print(f"Dataset loaded locally: {len(df)} rows")
 
 # Data cleaning and preprocessing
